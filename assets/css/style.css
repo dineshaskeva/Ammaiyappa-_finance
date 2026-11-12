@@ -10697,7 +10697,8 @@ body {
 }
 
 /* ==========================================================================
-   Header Styling - Reduced Logo Size & Clean Navigation
+   Header Styling - Prominent Occupied Logo & Clean Navigation
+   Navbar fully occupied by logo, strictly contained within bounds
    ========================================================================== */
 .site_header.header_ammaiyappa {
   position: absolute;
@@ -10705,7 +10706,7 @@ body {
   left: 0;
   width: 100%;
   z-index: 999;
-  padding: 14px 0;
+  padding: 10px 0;
   background: transparent;
   transition: all 0.35s ease-in-out;
 }
@@ -10718,7 +10719,7 @@ body {
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   box-shadow: 0 4px 20px rgba(5, 26, 53, 0.08) !important;
-  padding: 10px 0;
+  padding: 8px 0;
   animation: 0.4s ease-in-out fadeInDown;
 }
 
@@ -10728,21 +10729,30 @@ body {
   justify-content: space-between !important;
   gap: 16px !important;
   grid-template-columns: none !important;
+  width: 100% !important;
 }
 
-/* Logo - Strictly Reduced & Proportionate */
+/* Logo - Fully Occupies Navbar Height Cleanly Without Overflow */
 .site_header.header_ammaiyappa .site_logo {
   flex-shrink: 0;
-  max-width: 220px;
+  max-width: 280px;
+  display: flex;
+  align-items: center;
+}
+
+.site_header.header_ammaiyappa .site_link {
+  display: inline-flex;
+  align-items: center;
+  line-height: 1;
 }
 
 .site_header.header_ammaiyappa .header-logo,
 .site_header .header-logo,
 .header-logo {
-  height: 38px !important;
-  max-height: 40px !important;
+  height: 52px !important;
+  max-height: 54px !important;
   width: auto !important;
-  max-width: 210px !important;
+  max-width: 270px !important;
   transform: none !important;
   margin: 0 !important;
   object-fit: contain !important;
@@ -10752,6 +10762,49 @@ body {
 
 .site_header.header_ammaiyappa .header-logo:hover {
   transform: scale(1.02) !important;
+}
+
+.site_header.header_ammaiyappa.sticky .header-logo {
+  height: 46px !important;
+  max-height: 48px !important;
+  max-width: 240px !important;
+}
+
+@media (max-width: 1199px) and (min-width: 992px) {
+  .site_header.header_ammaiyappa .header-logo {
+    height: 46px !important;
+    max-height: 48px !important;
+    max-width: 235px !important;
+  }
+  .site_header.header_ammaiyappa .main-menu ul {
+    gap: 14px !important;
+  }
+  .btn_contact_now {
+    padding: 8px 18px !important;
+    font-size: 13.5px !important;
+  }
+}
+
+@media (max-width: 991px) {
+  .site_header.header_ammaiyappa {
+    padding: 8px 0 !important;
+  }
+  .site_header.header_ammaiyappa .header-logo {
+    height: 42px !important;
+    max-height: 44px !important;
+    max-width: 220px !important;
+  }
+}
+
+@media (max-width: 575px) {
+  .site_header.header_ammaiyappa {
+    padding: 8px 0 !important;
+  }
+  .site_header.header_ammaiyappa .header-logo {
+    height: 36px !important;
+    max-height: 38px !important;
+    max-width: 185px !important;
+  }
 }
 
 /* Navigation Menu */
